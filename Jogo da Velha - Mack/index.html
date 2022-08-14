@@ -1,0 +1,64 @@
+<DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="utf-8">
+	<title>Jogo da Velha</title>
+	<!-- fonte: san francisco-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+	<!--Sites de REPOS SVG: https://www.svgrepo.com/vectors/o/-->
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div id="container">
+		<header>
+			<div class="header-item header-left">
+				<div><img src="X.svg" id="Xstroke"></div>
+				<div><img src="O (Stroke).svg"></div>
+			</div>
+			<div class="header-item header-center"><p id="texto-rodada">X RODADA</p></div>
+			<div class="header-item header-right"><img src="fa-solid_undo-alt.svg" id="refresh"></div>
+		</header>
+		<main>
+			<div class="fileira1">
+				<div id="box"></div>
+				<div id="box"></div>
+				<div id="box"></div>
+			</div>
+			<div class="fileira2">
+				<div id="box"></div>
+				<div id="box"></div>
+				<div id="box"></div>
+			</div>
+			<div class="fileira3">
+				<div id="box"></div>
+				<div id="box"></div>
+				<div id="box"></div>
+			</div>	
+		</main>
+		<footer>
+			<div id="footer-boxes">
+				<div id="player">
+					<div>X (você)</div>
+					<div style="font-weight: bold">0</div>
+				</div>
+			</div>
+			<div id="footer-boxes">
+				<div id="empates">
+					<div>EMPATES</div>
+					<div style="font-weight: bold">0</div>
+				</div>
+			</div>
+			<div id="footer-boxes">
+				<div id="cpu-score">
+					<div>O (CPU)</div>
+					<div style="font-weight: bold">0</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+</body>
+</html>
