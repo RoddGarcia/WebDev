@@ -1,0 +1,184 @@
+body {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  overflow-x: hidden;
+  background-image: url(/images/background.png);
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  width: 800px;
+  max-width: 800px;
+  min-width: 375px;
+  min-height: 100vh;
+  background-color: #fafafa;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-around;
+  background-image: url(/images/menu.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100%;
+  height: 150px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.logoContainer {
+  display: flex;
+  margin: 20px 20px;
+}
+
+.logo {
+  width: 140px;
+  height: 140px;
+  padding: 0 20px 0 0;
+}
+
+.logoName {
+  width: 140px;
+  height: 50px;
+  margin-top: 10px;
+}
+
+.menuOpts {
+  display: flex;
+  flex: 1;
+  margin-top: 20px;
+  color: white;
+}
+
+.menuOpts ul {
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+  width: 100%;
+  padding: 0 40px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+h1 {
+  size: 32em;
+  color: #BF6A54;
+}
+
+footer {
+  margin-top: 32px;
+  padding: 10px;
+  font-size: 0.7rem;
+  color: white;
+  background-color: #F9C39C;
+}
+
+.Home {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.Home p,
+.Home h1 {
+  text-align: left;
+}
+
+.sliceRight,
+.sliceLeft {
+  padding: 10px 32px;
+}
+
+.sliceRight {
+  display: flex;
+}
+
+.sliceRight img {
+  width: 300px;
+  height: 200px;
+  align-self: center;
+  margin-left: 20px;
+}
+
+.sliceLeft {
+  display: flex;
+  background-color: #F9C39C;
+}
+
+.sliceLeft h1 {
+  text-align: right;
+}
+
+.sliceLeft p {
+  text-align: right;
+}
+
+.sliceLeft img {
+  height: 130px;
+  width: 150px;
+  align-self: center;
+  margin-right: 32px;
+}
+
+.Breeds {
+  padding: 10px 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.Breeds p {
+  text-align: left;
+}
+
+.breedsList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  justify-content: center;
+  padding: 32px 0;
+}
+
+.breedsList img {
+  width: 250px;
+  height: 230px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.About {
+  padding: 10px 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.About p {
+  text-align: left;
+}
+
+.About img {
+  align-self: center;
+}
+
+.About ul {
+  text-align: left;
+}
