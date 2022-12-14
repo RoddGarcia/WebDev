@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>E-commerce product | Rodrigo Garcia</title>
+  </head>
+  <body>
+    <div id="notification">
+      <p>This item was successfully added to your cart.</p>
+    </div>
+    <main>
+      <nav>
+        <div class="mobileMenu">
+          <div class="mobileLeft">
+            <img
+              src="images/icon-menu.svg"
+              id="openMenuOptions"
+              onclick="openMenuOptions()"
+            />
+            <img id="siteLogo" src="/images/logo.svg" alt="logo" />
+          </div>
+          <div class="mobileRight">
+            <img
+              id="cart"
+              src="/images/icon-cart.svg"
+              alt="cartIcon"
+              onclick="showCart()"
+            />
+            <img
+              id="userAvatar"
+              src="/images/image-avatar.png"
+              alt="avatarImg"
+            />
+          </div>
+        </div>
+        <div id="mobileMenuChoices">
+          <img
+            src="images/icon-close.svg"
+            id="closeMenuOptions"
+            onclick="closeMenuOptions()"
+          />
+          <div id="menuTabs">Collections</div>
+          <div id="menuTabs">Men</div>
+          <div id="menuTabs">Women</div>
+          <div id="menuTabs">About</div>
+          <div id="menuTabs">Contact</div>
+        </div>
+
+        <div class="menuChoices">
+          <img id="siteLogo" src="/images/logo.svg" alt="logo" />
+          <div id="menuTabs">Collections</div>
+          <div id="menuTabs">Men</div>
+          <div id="menuTabs">Women</div>
+          <div id="menuTabs">About</div>
+          <div id="menuTabs">Contact</div>
+        </div>
+
+        <div id="cartQtd"></div>
+        <div class="userInfo">
+          <img
+            id="cart"
+            src="/images/icon-cart.svg"
+            alt="cartIcon"
+            onclick="showCart()"
+          />
+          <img id="userAvatar" src="/images/image-avatar.png" alt="avatarImg" />
+        </div>
+
+        <div id="cartInfo">
+          <p id="cartTitle"><b>Cart</b></p>
+          <hr />
+          <div id="cartContent">
+            <div id="item"><p>Your cart is empty.</p></div>
+          </div>
+        </div>
+      </nav>
+
+      <hr />
+
+      <div class="info">
+        <div id="images">
+          <div id="arrows">
+            <img
+              id="leftArrow"
+              src="/images/icon-previous.svg"
+              onclick="mobilePreviousPhoto()"
+            />
+            <img
+              id="rightArrow"
+              src="/images/icon-next.svg"
+              onclick="mobileNextPhoto()"
+            />
+          </div>
+          <img
+            onclick="openPopup()"
+            id="productImage"
+            src="/images/image-product-1.jpg"
+            alt="productImage"
+          />
+
+          <div class="thumbnails">
+            <img
+              id="thumb"
+              class="active"
+              value="1"
+              onclick="changePhoto(1)"
+              src="/images/image-product-1-thumbnail.jpg"
+            />
+            <img
+              id="thumb"
+              value="2"
+              onclick="changePhoto(2)"
+              src="/images/image-product-2-thumbnail.jpg"
+            />
+            <img
+              id="thumb"
+              value="3"
+              onclick="changePhoto(3)"
+              src="/images/image-product-3-thumbnail.jpg"
+            />
+            <img
+              id="thumb"
+              value="4"
+              onclick="changePhoto(4)"
+              src="/images/image-product-4-thumbnail.jpg"
+            />
+          </div>
+        </div>
+
+        <div id="itemInfo">
+          <div class="sneakerCompany">Sneaker Company</div>
+          <div id="productName" class="productName">
+            Fall Limited Edition Sneakers
+          </div>
+          <div class="productDescription">
+            These low-profile sneakers are your perfect casual wear companion.
+            Featuring a durable rubber outer sole, they’ll withstand everything
+            the weather can offer.
+          </div>
+          <div class="price">
+            <div class="descontPrice">
+              <div id="valueDesconto">$125.00</div>
+              <div id="desconto">50%</div>
+            </div>
+            <div id="valueLiquid">$250.00</div>
+          </div>
+          <div class="conclude">
+            <div id="quantity">
+              <div id="diminuir" onclick="diminuir()">-</div>
+              <div id="quantityNumber"></div>
+              <div id="aumentar" onclick="aumentar()">+</div>
+            </div>
+            <div id="addToCart" onclick="addToCart()">
+              <img src="/images/icon-cart.svg" alt="iconCart" />
+              <div id="adicionarAoKart">Add to Cart</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >
+        Coded by <a href="#"> Rodrigo Garcia de Carvalho</a>
+      </div>
+    </main>
+
+    <div id="popup">
+      <img
+        src="/images/icon-close.svg"
+        onclick="closePopup()"
+        style="cursor: pointer"
+        id="closeButton"
+      />
+      <img id="photoDestaque" />
+      <div class="thumbnails">
+        <img
+          id="thumb"
+          class="active"
+          value="1"
+          onclick="changePhoto(1)"
+          src="/images/image-product-1-thumbnail.jpg"
+        />
+        <img
+          id="thumb"
+          value="2"
+          onclick="changePhoto(2)"
+          src="/images/image-product-2-thumbnail.jpg"
+        />
+        <img
+          id="thumb"
+          value="3"
+          onclick="changePhoto(3)"
+          src="/images/image-product-3-thumbnail.jpg"
+        />
+        <img
+          id="thumb"
+          value="4"
+          onclick="changePhoto(4)"
+          src="/images/image-product-4-thumbnail.jpg"
+        />
+      </div>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>
